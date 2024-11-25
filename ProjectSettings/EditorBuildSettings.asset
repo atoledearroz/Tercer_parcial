@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Conejotodotontomuere.unity
     guid: aa1553d55a04a914b8dc7631b595e470
+  - enabled: 1
+    path: Assets/Scenes/Niveles.unity
+    guid: 8c222cb8c89ce6a41a869342711f2fe3
   m_configObjects: {}

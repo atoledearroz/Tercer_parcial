@@ -62,4 +62,9 @@ public class CambioEscenas : MonoBehaviour
         SceneManager.LoadScene(7);
     }
 
+    public void escogerniveles()
+    {
+        SceneManager.LoadScene(8);
+    }
+
 }

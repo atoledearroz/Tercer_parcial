@@ -34,25 +34,25 @@ public class Ixtab : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+            //transform.rotation = Quaternion.Euler(0f, 0f, 0f);
             Move(Vector3.up);
         }
 
         else if (Input.GetKeyDown(KeyCode.DownArrow))
         {
-            transform.rotation = Quaternion.Euler(0f, 0f, 180f);
+           // transform.rotation = Quaternion.Euler(0f, 0f, 180f);
             Move(Vector3.down);
         }
 
         else if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            transform.rotation = Quaternion.Euler(0f, 0f, 90f);
+           // transform.rotation = Quaternion.Euler(0f, 0f, 90f);
             Move(Vector3.left);
         }
 
         else if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-            transform.rotation = Quaternion.Euler(0f, 0f, -90f);
+           // transform.rotation = Quaternion.Euler(0f, 0f, -90f);
             Move(Vector3.right);
         }
     }
