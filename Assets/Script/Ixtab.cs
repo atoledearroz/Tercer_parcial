@@ -6,6 +6,8 @@ public class Ixtab : MonoBehaviour
 {
     public AudioSource audioSource;
     public AudioClip moveSound;
+    public Animator animacionesMovimiento;
+    public GameManager gameManager; 
 
     // Start is called before the first frame update
     void Start()
@@ -32,30 +34,35 @@ public class Ixtab : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
         {
             //transform.rotation = Quaternion.Euler(0f, 0f, 0f);
             Move(Vector3.up);
+            animacionesMovimiento.SetTrigger("Frente");
         }
 
-        else if (Input.GetKeyDown(KeyCode.DownArrow))
+        else if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
         {
            // transform.rotation = Quaternion.Euler(0f, 0f, 180f);
             Move(Vector3.down);
+            
         }
 
-        else if (Input.GetKeyDown(KeyCode.LeftArrow))
+        else if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
         {
            // transform.rotation = Quaternion.Euler(0f, 0f, 90f);
             Move(Vector3.left);
+            animacionesMovimiento.SetTrigger("Izquierda");
         }
 
-        else if (Input.GetKeyDown(KeyCode.RightArrow))
+        else if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
         {
            // transform.rotation = Quaternion.Euler(0f, 0f, -90f);
             Move(Vector3.right);
+            animacionesMovimiento.SetTrigger("Derecha");
         }
     }
+
 
     private void Move(Vector3 direction)
     {
@@ -129,7 +136,7 @@ public class Ixtab : MonoBehaviour
         spriteRenderer.sprite = deathSprite;
         enabled = false;
 
-        FindObjectOfType<GameManager>().Died();
+       gameManager.Died();
     }
 
     public void Respawn()
