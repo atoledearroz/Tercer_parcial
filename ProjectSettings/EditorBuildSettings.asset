@@ -8,4 +8,28 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Instrucciones.unity
+    guid: 02a1eb6d7964bbe438ff49b6a276d8c5
+  - enabled: 1
+    path: Assets/Scenes/Primera_escena.unity
+    guid: 3cb376175823507468f658112e7fd2d9
+  - enabled: 1
+    path: Assets/Scenes/Nivel_1.unity
+    guid: c73814e31f0ec8f45a8ef0a93e0419f9
+  - enabled: 1
+    path: Assets/Scenes/Nivel_2.unity
+    guid: 30cac0bd4bdde3b4382133fbd66d5141
+  - enabled: 1
+    path: Assets/Scenes/Nivel_3.unity
+    guid: 4103f48dc98eff7449809092f0aeb10d
+  - enabled: 1
+    path: Assets/Scenes/Escena_final.unity
+    guid: 23b870bb05cc488419e0ab1b254a6a38
+  - enabled: 1
+    path: Assets/Scenes/Conejotodotontomuere.unity
+    guid: aa1553d55a04a914b8dc7631b595e470
+  - enabled: 1
+    path: Assets/Scenes/Niveles.unity
+    guid: 8c222cb8c89ce6a41a869342711f2fe3
   m_configObjects: {}
