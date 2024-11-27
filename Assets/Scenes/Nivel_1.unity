@@ -1293,7 +1293,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a7b40e0fedeeab4a8b29289e3623826, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Animador: {fileID: 14073731}
 --- !u!4 &2069359566
 Transform:
   m_ObjectHideFlags: 0
@@ -1356,6 +1355,10 @@ PrefabInstance:
     - target: {fileID: 207688447505639148, guid: 3a00faddf35a9e441adcbea51a164a49, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 360261753269277037, guid: 3a00faddf35a9e441adcbea51a164a49, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2317567913178026276, guid: 3a00faddf35a9e441adcbea51a164a49, type: 3}
       propertyPath: m_Name
