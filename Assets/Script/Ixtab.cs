@@ -6,6 +6,7 @@ public class Ixtab : MonoBehaviour
 {
     public AudioSource audioSource;
     public AudioClip moveSound;
+    public Animator animacionesMovimiento;
 
     // Start is called before the first frame update
     void Start()
@@ -36,24 +37,28 @@ public class Ixtab : MonoBehaviour
         {
             //transform.rotation = Quaternion.Euler(0f, 0f, 0f);
             Move(Vector3.up);
+            animacionesMovimiento.SetTrigger("Frente");
         }
 
         else if (Input.GetKeyDown(KeyCode.DownArrow))
         {
            // transform.rotation = Quaternion.Euler(0f, 0f, 180f);
             Move(Vector3.down);
+            animacionesMovimiento.SetTrigger("Frente");
         }
 
         else if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
            // transform.rotation = Quaternion.Euler(0f, 0f, 90f);
             Move(Vector3.left);
+            animacionesMovimiento.SetTrigger("Derecha");
         }
 
         else if (Input.GetKeyDown(KeyCode.RightArrow))
         {
            // transform.rotation = Quaternion.Euler(0f, 0f, -90f);
             Move(Vector3.right);
+            animacionesMovimiento.SetTrigger("Izquierda");
         }
     }
 
