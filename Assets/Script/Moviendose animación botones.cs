@@ -14,12 +14,29 @@ public class Moviendoseanimaciónbotones : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        cambiarAnimaciones();
+        Derecha();
+        Izquierda();
+        Arriba();
+        Abajo();
     }
 
-    public void cambiarAnimaciones()
+    public void Derecha()
     {
-        Animador.SetTrigger("");
+        Animador.SetTrigger("Derecha");
+    }
+
+    public void Izquierda()
+    {
+        Animador.SetTrigger("Izquierda");
+    }
+
+    public void Arriba()
+    {
+        Animador.SetTrigger("Frente");
     }
     
+    public void Abajo()
+    {
+        Animador.SetTrigger("Frente");
+    }
 }
