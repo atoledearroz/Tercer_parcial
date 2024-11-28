@@ -21,7 +21,7 @@ public class Casitas : MonoBehaviour
         if (other.tag == "Player")
         {
             enabled = true;
-            FindObjectOfType<GameManager>().HomeOccupied();
+            FindObjectOfType<GameManager>().HomeOccupied1();
 
 
 

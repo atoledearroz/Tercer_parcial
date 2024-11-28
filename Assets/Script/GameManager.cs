@@ -48,21 +48,9 @@ public class GameManager : MonoBehaviour
 
     }
 
-    private void NewLevel1()
-    {
-        for (int i = 0; i < cajas.Length; i++)
-        {
-            cajas[i].enabled = false;
-        }
-
-        SceneManager.LoadScene(3);
-
-    }
-
     private void NewRound()
     {
         Respawn();
-
     }
 
     private void Respawn()
@@ -110,26 +98,6 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public void HomeOccupied()
-    {
-        ixtab.gameObject.SetActive(false);
-
-        int bonusPoints = time * 20;
-        SetScore(score + bonusPoints + 50);
-
-        if (Cleared())
-        {
-            SetScore(score + 1000);
-            SetLives(lives + 1);
-            Invoke(nameof(NewLevel), 1f);
-
-        }
-        else
-        {
-            Invoke(nameof(NewRound), 1f);
-        }
-    }
-
     public void HomeOccupied1()
     {
         ixtab.gameObject.SetActive(false);
@@ -145,7 +113,15 @@ public class GameManager : MonoBehaviour
 
         if (AllCajasOccupied())
         {
-            Invoke(nameof(NewLevel1), 1f);
+            int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+            int nextSceneIndex = currentSceneIndex + 1;
+
+            if (nextSceneIndex > 6)
+            {
+                nextSceneIndex = 3;
+            }
+
+            SceneManager.LoadScene(nextSceneIndex);
         }
 
         else
