@@ -10,9 +10,6 @@ public class Casitas : MonoBehaviour
         {
             enabled = true;
             FindObjectOfType<GameManager>().HomeOccupied1();
-
-
-
         }
     }
 }
