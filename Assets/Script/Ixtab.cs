@@ -8,6 +8,9 @@ public class Ixtab : MonoBehaviour
     public AudioClip moveSound;
     public Animator animacionesMovimiento;
 
+    float x;
+    float y;
+
     public GameManager gameManager; 
 
     // Start is called before the first frame update
@@ -35,6 +38,12 @@ public class Ixtab : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        x = gameObject.transform.position.x;
+        y = gameObject.transform.position.y;
+
+        if (gameObject.transform.position.x <= -3) { x = 2; }
+        if (gameObject.transform.position.x >= 3) { x = -2; }
+        if (gameObject.transform.position.y <= -4.39) { y = -4.39f; }
         if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
         {
             //transform.rotation = Quaternion.Euler(0f, 0f, 0f);
@@ -62,6 +71,8 @@ public class Ixtab : MonoBehaviour
             Move(Vector3.right);
             animacionesMovimiento.SetTrigger("Derecha");
         }
+
+        gameObject.transform.position = new Vector3(x, y, 0);
     }
 
 
