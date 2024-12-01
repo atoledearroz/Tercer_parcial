@@ -27,11 +27,6 @@ public class CambioEscenas : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
-    public void primeraescena()
-    {
-        SceneManager.LoadScene(2);
-    }
-
     public void nivel1()
     {
         SceneManager.LoadScene(3);

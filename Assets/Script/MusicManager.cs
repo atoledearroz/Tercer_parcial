@@ -18,7 +18,7 @@ public class MusicManager : MonoBehaviour
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
 
-        if (scene.buildIndex == 0 || scene.buildIndex == 1 || scene.buildIndex == 2)
+        if (scene.buildIndex >= 0 && scene.buildIndex <= 2)
         {
             if (!audioSource.isPlaying)
             {
@@ -26,7 +26,7 @@ public class MusicManager : MonoBehaviour
                 audioSource.Play();
             }
         }
-        else if(scene.buildIndex == 3)
+        else if(scene.buildIndex >= 3 && scene.buildIndex <= 7)
         {
             audioSource.Stop();
         }
