@@ -712,8 +712,8 @@ GameObject:
   - component: {fileID: 387317681}
   - component: {fileID: 387317680}
   - component: {fileID: 387317679}
-  - component: {fileID: 387317683}
   - component: {fileID: 387317684}
+  - component: {fileID: 387317683}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -841,7 +841,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 0.54421926
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
